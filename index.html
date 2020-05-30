@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<style type="text/css">
+		.box{
+			height: 400px;
+			width: 700px;
+			background: white;
+			position: absolute;
+			top: 100px;
+			left: 600px;
+			display: none;
+			border-style: solid;
+		}
+		
+		.var{
+			height: 50px;
+			width: 700px;
+			background: white;
+			position: absolute;
+			top: 400px;
+			left: 0px;
+			border-style: groove;
+			
+		}
+
+		.hi{
+			height: 470px;
+			width: 700px;
+			background-image: url(bg.webp);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 200px;
+			left: 600px;
+			border-style: solid;
+			color: #261e26;	
+		}
+
+		.b1{
+			height: 90px;
+			width: 120px;
+			position: absolute;
+			left: 1460px;
+			top: 490px;
+		}
+
+		.b2{
+			height: 250px;
+			width: 180px;
+			position: absolute;
+			left: 140px;
+			top: 450px;
+		}
+
+		.b3{
+			height: 80px;
+			position: absolute;
+			left: 1675px;
+			top: 280px;
+		}
+
+		.b4{
+			height: 150px;
+			width: 100px;
+			position: absolute;
+			left: 1530px;
+			top: 600px;
+		}
+
+		.b5{
+			height: 200px;
+			width: 300px;
+			position: absolute;
+			left: 160px;
+			top: 730px;
+		}
+	</style>
+</head>
+<body>
+
+		<div class="hi">
+			<h2 style="padding-left: 300px; padding-top: 30px; font-family: segoe print">Привет!</h2>
+			<h3 class="text" style="padding-left: 30px; padding-right: 30px; padding-top: 10px; font-family: segoe print"> Эта игра посвящена школе. В ней ты проведёшь последний день в школе перед началом летних каникул. Для того, чтобы переходить на следующую локацию, нажмай на кнопку next в правом нижнем углу. За каждое выполненное задание ты будешь получать очки, которые отображаются в левом верхнем углу. Желаю удачи! Надеюсь тебе понравится игра :) </h3>
+			<button class="btn" style="margin-left: 340px; font-family: segoe print; background-color: #c1becc; color: #261e26; border-style: solid;">Play</button>
+		</div>
+
+		<h4 class="score1" style="display: none;font-family: segoe print">Счёт: <span class="scr1" style="font-family: segoe print"></span></h4>
+		<div class="all" style="display: flex;">
+			<h4 class="t1" style="display: flex; font-family: segoe print; color: #261e26 ; display: none;">Время: <span class="time" style="position: absolute; margin-left: 10px;"></span></h4>
+			<h4 class="s" style="display: flex; font-family: segoe print; color: #261e26; display: none; margin-left: 80px">Счёт: <span class="score" style="position: absolute; margin-left: 10px;"></span></h4>
+		</div>
+		
+		<div class="koridor" style="background-color: lightyellow; width: 1900px; height: 930px; position: absolute; display: none; background-image: url(7.jpg);">
+			<div class="player" style="width: 400px; height: 500px; margin-left: 850px; margin-top: 440px; position: absolute; display: none;background-image: url(5.png);"></div>
+		</div>
+
+		<div class="canteen" style="background-color: lightblue; width: 1900px; height: 930px;  position: absolute; display: none; background-image: url(1.jpg); background-size: 100% 100%;">
+			<div class="donut" style="width: 130px; height: 80px; margin-left: 1400px; margin-top: 620px; position: absolute; display: none;  background-image: url(donut.png); background-size: 100% 100%;"></div>
+			<div class="player2" style="width: 300px; height: 500px; margin-left: 850px; margin-top: 430px; position: absolute; display: none; background-image: url(14.png); background-size: 100% 100%;"></div>
+		</div>
+		
+		<div class="classroom" style="background-color: lightgreen; width: 1900px; height: 930px;  position: absolute; display: none; background-image: url(5.jpg); background-size: 100% 100%;">
+			<div class="all2" style=" display: flex;">
+				<h4 class="s2" style="display: none; font-family: segoe print; color: #e7e8e3;">Баллы:</h4> 
+				<h4><span class="score3" style="display: none; font-family: segoe print; color: #e7e8e3; "></span></h4>
+			</div>
+
+			<div class="box box1"  style="background-image: url(primer1.png); background-size: 100% 100%; ">
+				<h2 class="var var1" >
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">0</button>
+				</h2>
+				<h2 class="var var1" style="top: 470px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">9</button>
+				</h2>
+				<h2 class="var var1" style="top: 540px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">3</button>
+				</h2>
+				<h2 class="var varver1" style="top: 610px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">1</button>
+				</h2>
+			</div>
+
+			<div class="box box2" style="background-image: url(primer2.jpg); background-size: 100% 100%; ">
+				<h2 class="var var2">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">16</button>
+				</h2>
+				<h2 class="var var2" style="top: 470px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">12</button>
+				</h2>
+				<h2 class="var var2" style="top: 540px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">18</button>
+				</h2>
+				<h2 class="var varver2" style="top: 610px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">14</button>
+				</h2>
+			</div>
+
+			<div class="box box3" style=""><h1 style="padding-top: 10px; padding-left: 30px; padding-right: 30px; text-align: center; position: absolute;">Лист бумаги прямоугольной формы свернули пополам 6 раз. В средней части этого сложенного листа просверлили насквозь 2 отверстия. Сколько отверстий можно будет насчитать на листе после того, как его развернут? </h1>
+				<h2 class="var varver3">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">128</button>
+				</h2>
+				<h2 class="var var3" style="top: 470px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">154</button>
+				</h2>
+				<h2 class="var var3" style="top: 540px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">112</button>
+				</h2>
+				<h2 class="var var3" style="top: 610px">
+					<button class="bt" style="width: 200px; margin-left: 250px; background-color: #ebe9df">136</button>
+				</h2>
+			</div>
+			<button class="konez" style="width: 200px; height: 100px; display: none; background-color: #274025; color: #e7e8e3; font-family: segoe print; margin-top: 450px; margin-left: 900px">Завершить тест</button>
+		</div>
+		<div class="studio" style="background-image: url(2.jpg); width: 1900px; height: 930px;  position: absolute; display: none;">
+			<div class="player3" style="background-image: url(3.png); width: 200px; height: 500px; margin-left: 850px; margin-top: 430px; position: absolute; display: none; background-size: 100% 100%;"></div>
+			<div class="col-1 bg-secondary" style="height: 350px">
+				<h3 class="text-light">Найти:</h3>
+				<p class="text-light p1 ">1.Тетрадь с нотами</p>
+				<p class="text-light p2">2.Гитара</p>
+				<p class="text-light p3">3.Постер</p>
+				<p class="text-light p4">4.Телефон</p>
+				<p class="text-light p5">5.Сумка</p>
+				<h3 class="text-light">Очки:</h3> 
+				<h3><span class="score2"></span></h3>
+			</div>
+			<img src="notes.png" class="b1">
+			<img src="guitar.png" class=" b2">
+			<img src="poster.png" class=" b3">
+			<img src="phone.png" class=" b4">
+			<img src="bag.png" class=" b5">
+		</div>
+		<div class="hall" style="background-color: lightpink; width: 1900px; height: 930px;  position: absolute; display: none; background-image: url(6.jpg);">
+			<div class="player4" style="background-image: url(4.png); width: 300px; height: 500px; margin-left: 850px; margin-top: 430px; position: absolute; display: none;"></div>
+		</div>
+		<button class="btn1" style="width: 120px; height: 50px; margin-left: 1770px; margin-top: 850px; background-color: #998bc7; position: absolute; display: none; font-family: segoe print; color: #e7e8e3">Next</button>
+					
+
+	
+	
+
+	<script type="text/javascript">
+		let btn = document.querySelector(".btn");
+		let next = document.querySelector(".btn1");
+		let loc1 =  document.querySelector(".koridor");
+		let loc2 =  document.querySelector(".canteen");
+		let loc3 =  document.querySelector(".classroom");
+		let loc5 =  document.querySelector(".studio");
+		let loc4 =  document.querySelector(".hall");
+		let player = document.querySelector(".player");
+		let player2 = document.querySelector(".player2");
+		let player3 = document.querySelector(".player3");
+		let time = document.querySelector(".time");
+		let score = document.querySelector(".score");
+		let scr1 = document.querySelector(".scr1");
+		let donut = document.querySelector(".donut");
+		let t1 = document.querySelector(".t1");
+		let s = document.querySelector(".s");
+		let box1 = document.querySelector(".box1");
+		let var1 = document.querySelectorAll(".var1");
+		let varver1 = document.querySelector(".varver1");
+		let box2 = document.querySelector(".box2");
+		let var2 = document.querySelectorAll(".var2");
+		let varver2 = document.querySelector(".varver2");
+		let box3 = document.querySelector(".box3");
+		let var3 = document.querySelectorAll(".var3");
+		let varver3 = document.querySelector(".varver3");
+		let player4 = document.querySelector(".player4");
+		let p1 = document.querySelector(".p1");
+		let p2 = document.querySelector(".p2");
+		let p3 = document.querySelector(".p3");
+		let p4 = document.querySelector(".p4");
+		let p5 = document.querySelector(".p5");
+		let konez = document.querySelector(".konez");
+		let score3 = document.querySelector(".score3");
+		let score2 = document.querySelector(".score2");
+		let score1 = document.querySelector(".score1");
+		let s2 = document.querySelector(".s2");
+		let scr2 = 0;
+		let scr3 = 0;
+		let num = 10;
+		let scr = 0;
+		let sc = 50;
+
+		btn.onclick = function(){
+			loc1.style.display ="block";
+			scr1.innerHTML = sc;
+			player.style.display ="block";
+			alert("Наконец этот урок закончился! Теперь можно сходить в столовую");
+			next.style.display ="block";
+			score1.style.display ="block";
+		}	
+
+
+		next.onclick = function(){
+			next.style.display ="none";
+			loc1.style.display ="none";
+			score1.style.display ="none";
+			loc2.style.display ="block";
+			player.style.display ="none";
+			player2.style.display ="block";
+			alert("Очередь была такой длинной. Я еле, как успела взять последний пончик");
+			alert("Ааа! Осталось всего 2 минуты до начала урока");
+			alert("Мне нужно доесть пончик и вовремя попасть на урок. Для этого ты дожен нажать на него 30 раз за 10 секунд");
+			next.style.display ="none";
+			let timer = function(){
+				num = num - 1;
+				time.innerHTML = num;
+				if (scr < 30 && num==0) {
+					alert("Ты проиграл");
+					score1.style.display ="block";
+					sc = sc - 20;
+					scr1.innerHTML = sc;
+					donut.style.display = "none";
+					t1.style.display ="none";
+					s.style.display ="none";
+					next.style.display ="block";
+					
+					next.onclick = function(){
+						loc2.style.display ="none";
+						loc3.style.display = "block";
+						alert("Я опоздала :( Нужно было доедать быстрее");
+						player2.style.display ="none";
+						alert("Здравствуйте класс. Сегодня вы пишите контрольную. Надеюсю вы хорошо подготовились");
+						alert("Ой я совсем забыла, что сегодня будет контрольная");
+						alert("Помоги мне сдать тест. Для этого ты должен правильно ответить минимум на 2 вопроса из трех.");
+						next.style.display ="none";
+						konez.onclick = function(){	
+							if ( scr3 >= 2) {
+								alert("Ты справился с экзаменом");
+								sc = sc + 20;
+								scr1.innerHTML = sc;
+								loc3.style.display ="none";
+								loc5.style.display ="block";
+								player3.style.display ="block";	
+								alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+								alert("Найди все предметы из списка в левом верхнем углу. Когда закончишь нажми на кнопку next, чтобы завершить игру");
+								next.style.display ="none";
+									next.onclick = function(){
+									loc5.style.display ="block";
+									player3.style.display ="block";	
+									next.style.display ="none";
+									alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+									alert("Найди все предметы из списка в левом верхнем углу");
+									score2.innerHTML = scr2;
+								}
+	 						}
+							
+							let lose = function(){
+								if (scr3 < 2) {
+									alert("Ты провалил экзамен");
+									sc = sc - 20;
+									scr1.innerHTML = sc;
+									loc3.style.display ="none";
+									loc5.style.display ="block";
+									player3.style.display ="block";	
+									alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+									alert("Найди все предметы из списка левом верхнем углу");
+									next.style.display ="none";
+									next.onclick = function(){
+										loc5.style.display ="block";
+										player3.style.display ="block";	
+										next.style.display ="none";
+										alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+										alert("Найди все предметы из списка в левом верхнем углу. Когда закончишь нажми на кнопку next, чтобы завершить игру");
+										score2.innerHTML = scr2;
+									}
+								}
+							}
+							setTimeout(lose, 1000);
+						}
+					}
+				}
+			}
+			let stop = setInterval(timer, 1000);
+			t1.style.display ="block";
+			s.style.display ="block";
+			donut.style.display = "block";
+		}
+
+		
+
+		
+		donut.onclick = function(){
+			scr = scr + 1;
+			score.innerHTML = scr;
+
+			time.innerHTML = num;
+
+
+			if (scr >= 30 &&  num> 0 ) {
+				alert("Молодец ты справился с заданием!");
+				score1.style.display ="block";
+				sc = sc + 20;
+				scr1.innerHTML = sc;
+				donut.style.display = "none";
+				t1.style.display ="none";
+				s.style.display ="none";
+				next.style.display ="block";
+				
+				next.onclick = function(){
+					loc2.style.display ="none";
+					loc3.style.display = "block";
+					alert("Фух....Еле успела на урок");
+					player2.style.display ="none";
+					alert("Здравствуйте класс. Сегодня вы пишите контрольную. Надеюсю вы хорошо подготовились");
+					alert("Ой я совсем забыла, что сегодня будет контрольная");
+					alert("Помоги мне сдать тест. Для этого ты должен правильно ответить минимум на 2 вопроса из трех.");
+					next.style.display ="none";
+					konez.onclick = function(){	
+						if ( scr3 >= 2) {
+							alert("Ты справился с экзаменом");
+							sc = sc + 20;
+							scr1.innerHTML = sc;
+							loc3.style.display ="none";
+							loc5.style.display ="block";
+							player3.style.display ="block";	
+							alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+							alert("Найди все предметы из списка в левом верхнем углу");
+							next.style.display ="none";
+							next.onclick = function(){
+								loc5.style.display ="block";
+								player3.style.display ="block";	
+								next.style.display ="none";
+								alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+								alert("Найди все предметы из списка в левом верхнем углу");
+								score2.innerHTML = scr2;
+							}
+ 						}
+						
+						let lose = function(){
+							if (scr3 < 2) {
+								alert("Ты провалил экзамен");
+								sc = sc - 20;
+								scr1.innerHTML = sc;
+								loc3.style.display ="none";
+								loc5.style.display ="block";
+								player3.style.display ="block";	
+								alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+								alert("Найди все предметы из списка в левом верхнем углу");
+								next.style.display ="none";
+								next.onclick = function(){
+									loc5.style.display ="block";
+									player3.style.display ="block";	
+									next.style.display ="none";
+									alert("Перед тем, как уходить. Мне нужно зайти в музыкальный класс и забрать свои вещи");
+									alert("Найди все предметы из списка в левом верхнем углу");
+									score2.innerHTML = scr2;
+								}
+
+							}
+						}
+						setTimeout(lose, 1000);
+					}	
+				}
+				clearInterval(stop);
+			}
+			/*let lose = function(){
+				if (scr < 30 && num==0) {			
+				}
+			}
+			setTimeout(lose, 1000);*/	
+			}
+			let exam = function(){
+					player3.style.display ="none";
+ 					box1.style.display ="block";		
+					s2.style.display ="block";
+					score3.style.display ="block";
+
+ 					for (let i = 0; i < 3; i++) {
+ 						var1[i].onclick = function(){
+ 							alert("Это неправильный ответ");
+ 							box1.style.display ="none";
+ 							box2.style.display ="block";
+ 						}
+ 					}
+
+					varver1.onclick = function(){
+ 						alert("Это правильный ответ");
+ 						box1.style.display ="none";
+ 						box2.style.display ="block";
+ 						scr3 = scr3 + 1;
+ 						score3.innerHTML = scr3;
+					}
+						
+					for (let i = 0; i < 3; i++) {
+						var2[i].onclick = function(){
+ 							alert("Это неправильный ответ");
+ 							box2.style.display ="none";
+ 							box3.style.display ="block";
+ 						}
+ 					}
+
+					varver2.onclick = function(){
+ 						alert("Это правильный ответ");
+ 						box2.style.display ="none";
+ 						box3.style.display ="block";
+ 						scr3 = scr3 + 1;
+ 						score3.innerHTML = scr3;
+					}
+					
+					for (let i = 0; i < 3; i++) {
+						var3[i].onclick = function(){
+ 							alert("Это неправильный ответ");
+ 							box3.style.display ="none";
+ 							konez.style.display ="block";
+ 						}
+ 					}
+
+					varver3.onclick = function(){
+ 						alert("Это правильный ответ");
+ 						box3.style.display ="none";
+ 						scr3 = scr3 + 1;
+ 						score3.innerHTML = scr3;
+ 						konez.style.display ="block";
+					}						
+					
+				}
+				setTimeout(exam, 1000); 
+				
+
+
+
+			document.querySelector(".b1").onclick = function(){
+				alert("Ура! Ты нашел тетрадь с нотами");
+				document.querySelector(".b1").style.display = "none";
+				scr2 = scr2 +1;
+				score2.innerHTML = scr2;
+				p1.style.textDecoration = "line-through";
+				if (scr2 == 5) {
+					next.style.display ="block";
+					sc = sc + 10;
+					scr1.innerHTML = sc;
+
+					next.onclick = function(){
+						loc5.style.display = "none";
+						loc4.style.display = "block";
+						player4.style.display = "block";
+						alert("Это был очень насыщенный день. Теперь начались каникулы. Ура! Мне пора, пока :)");
+						alert("Конец игры. Надеюсь она тебе понравилась!");
+						next.style.display = "none";
+					}
+				}
+			}
+
+			document.querySelector(".b2").onclick = function(){
+				alert("Молодец! Ты нашел гитару");
+				document.querySelector(".b2").style.display = "none";
+				scr2 = scr2 +1;
+				score2.innerHTML = scr2;
+				p2.style.textDecoration = "line-through";
+				if (scr2 == 5) {
+					next.style.display ="block";
+					sc = sc + 10;
+					scr1.innerHTML = sc;
+
+					next.onclick = function(){
+						loc5.style.display = "none";
+						loc4.style.display = "block";
+						player4.style.display = "block";
+						alert("Это был очень насыщенный день. Теперь начались каникулы. Ура! Мне пора, пока :)");
+						alert("Конец игры. Надеюсь она тебе понравилась!");
+						next.style.display = "none";
+					}
+				}
+			}
+
+
+
+			document.querySelector(".b3").onclick = function(){
+				alert("Ура! Ты нашел постер");
+				document.querySelector(".b3").style.display = "none";
+				scr2 = scr2 +1;
+				score2.innerHTML = scr2;
+				p3.style.textDecoration = "line-through";
+				if (scr2 == 5) {
+					next.style.display ="block";
+					sc = sc + 10;
+					scr1.innerHTML = sc;
+
+					next.onclick = function(){
+						loc5.style.display = "none";
+						loc4.style.display = "block";
+						player4.style.display = "block";
+						alert("Это был очень насыщенный день. Теперь начались каникулы. Ура! Мне пора, пока :)");
+						alert("Конец игры. Надеюсь она тебе понравилась!");
+						next.style.display = "none";
+					}
+				}
+			}
+
+			document.querySelector(".b4").onclick = function(){
+				alert("Молодец! Ты нашел телефон");
+				document.querySelector(".b4").style.display = "none";
+				scr2 = scr2 +1;
+				score2.innerHTML = scr2;
+				p4.style.textDecoration = "line-through";
+				if (scr2 == 5) {
+					next.style.display ="block";
+					sc = sc + 10;
+					scr1.innerHTML = sc;
+
+					next.onclick = function(){
+						loc5.style.display = "none";
+						loc4.style.display = "block";
+						player4.style.display = "block";
+						alert("Это был очень насыщенный день. Теперь начались каникулы. Ура! Мне пора, пока :)");
+						alert("Конец игры. Надеюсь она тебе понравилась!");
+						next.style.display = "none";
+					}
+				}
+			}
+
+			document.querySelector(".b5").onclick = function(){
+				alert("Так держать! Ты нашел сумку");
+				document.querySelector(".b5").style.display = "none";
+				scr2 = scr2 +1;
+				score2.innerHTML = scr2;
+				p5.style.textDecoration = "line-through";
+				if (scr2 == 5) {
+					next.style.display ="block";
+					sc = sc + 10;
+					scr1.innerHTML = sc;
+
+					next.onclick = function(){
+						loc5.style.display = "none";
+						loc4.style.display = "block";
+						player4.style.display = "block";
+						alert("Это был очень насыщенный день. Теперь начались каникулы. Ура! Мне пора, пока :)");
+						alert("Конец игры. Надеюсь она тебе понравилась!");
+						next.style.display = "none";
+					}
+				}
+			}
+
+						
+
+	</script>
+</body>
+</html>
